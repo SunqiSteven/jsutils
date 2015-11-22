@@ -87,4 +87,3 @@ window.base64 = {
     return window.btoa(unescape(encodeURIComponent(s)));
   }
 }
-console.log(base64.decode("c3VucWk="));
