@@ -188,24 +188,51 @@ var BST = function(){
 
     },
     this.inorder= function(node){
+         
          if( node.left != null){
              this.inorder(node.left);
-             node.show();
+          }
+
+          node.show();
+          if(node.right != null){
              this.inorder(node.right);
-         }else{
-              node.show();
-         }
+
+          }
+
+
+              
+       
     },
-    this.remove = function(){}
+    this.remove = function(){},
+  
+    this.getMin = function(){
+        var current = this.root;
+        while( current.left != null){
+             current = current.left;
+        }
+        return current.data;
+    },
+    this.getMax = function(){
+        var current = this.root;
+        while(current.right != null){
+             current = current.right;
+        }
+        return current.data;
+    },
+    this.find = function(data){
+        var current = this.root;
+        while(current != null){
+             if(current.data == data){
+                 return current;
+             }else if(current.data>data){
+                 current = current.left;
+             }else if(data>current.data){
+                 current = current.right;
+             }
+        }
+        return null;
+    }
+
 
 }
-var tree = new BST();
-tree.insert(50);
-tree.insert(25);
-tree.insert(100);
-tree.insert(26);
-tree.insert(202);
-tree.insert(99);
-tree.insert(1);
-tree.inorder(tree.root);
-     
+//算法 数据检索
