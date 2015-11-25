@@ -3,7 +3,7 @@ window.time = {
   now: function() {
     return parseInt((new Date()).getTime() / 1000);
   },
-  //格式化
+  //格式化 2015/22/12 22:22:22  yyyy/mm/dd hh:ii
   format: function(t) {
     if (!t) {
       var t = time.now();

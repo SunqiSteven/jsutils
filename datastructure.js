@@ -1,4 +1,9 @@
 /*
+javascript 实现的各种数据结构  Queue Stack List Dict Set BST 
+ */
+
+
+/*
 Queue
 */
 var Queue = function() {
@@ -34,6 +39,7 @@ var Queue = function() {
     this.clear = function() {
         this.dataStore.length = 0;
     },
+    //显示队列中的元素
     this.toString = function() {
         return this.dataStore.join(",");
     }
@@ -235,12 +241,12 @@ var BST = function(){
 
 
 }
-var tree = new BST();
-tree.insert(50);
-tree.insert(25);
-tree.insert(222);
-tree.insert(2);
-tree.insert(235);
-tree.insert(8)
-console.log(tree.find(25));
+// var tree = new BST();
+// tree.insert(50);
+// tree.insert(25);
+// tree.insert(222);
+// tree.insert(2);
+// tree.insert(235);
+// tree.insert(8)
+// console.log(tree.find(25));
      
