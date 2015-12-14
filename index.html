@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+    <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="time.js"></script>
+	<script type="text/javascript" src="datastructure.js"></script>
+    <script type="text/javascript" src="object.js"></script>
+    <script type="text/javascript" src="./controller/common.js"></script>
+    <script type="text/javascript" src="./controller/user.js"></script>
+
+
+
+
+</head>
+<body>
+      <div id="container"></div>
+	  <script>
+	     (function(){
+	     	   window.apisClasses.section.constants.MODE="fetch";
+               var content = window.apisClasses.section.constants.MODE;
+               var user = new window.controller.user();
+               user.getSpeed();
+               // console.log(user.constructor);
+               $("#container").text( user.version );
+               
+               
+	      })();
+          
+
+	  </script>
+</body>
+</html>
