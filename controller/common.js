@@ -1,5 +1,5 @@
 if( window.controller=== undefined ){ window.controller = {};}
-window.controller.common = function(){
+window.controller.Common = function(){
 
     // if(typeof this._initialize == "function"){ this._initialize();}
     // this.version="1.0.0";

@@ -1,5 +1,5 @@
 if( window.controller=== undefined ){ window.controller = {};}
-window.controller.user = function(){
+window.controller.User = function(){
      // window.controller.common.apply(this); //构造函数绑定实现继承
 		this.username = "";
 		this.speed    =123;
