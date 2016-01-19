@@ -5,6 +5,3 @@
 
 
 javascript数组迭代器 forEach every  map filter reduce some reduceRight
-
-### 2016.1.11
- * HTML5  history API 

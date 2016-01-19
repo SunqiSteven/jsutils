@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 ==================================================================
 
@@ -20,6 +21,8 @@
 
 
 
+=======
+>>>>>>> de9b9f0b2cf68fcff96fda32afbdc8683b7e14b9
 window.time = {
   //获取当前的时间戳
   now: function() {
@@ -100,3 +103,15 @@ window.time = {
   }
 }
 
+<<<<<<< HEAD
+=======
+window.base64 = {
+  // https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
+  decode: function(s) {
+    return decodeURIComponent(escape(window.atob(s)));
+  },
+  encode: function(s) {
+    return window.btoa(unescape(encodeURIComponent(s)));
+  }
+}
+>>>>>>> de9b9f0b2cf68fcff96fda32afbdc8683b7e14b9
