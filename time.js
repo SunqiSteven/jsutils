@@ -1,3 +1,25 @@
+/*
+==================================================================
+
+ js时间操作,window.time对象 
+ now()  获取当前的时间戳
+
+
+
+
+
+
+
+
+===================================================================
+ */
+
+
+
+
+
+
+
 window.time = {
   //获取当前的时间戳
   now: function() {
@@ -78,12 +100,3 @@ window.time = {
   }
 }
 
-window.base64 = {
-  // https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
-  decode: function(s) {
-    return decodeURIComponent(escape(window.atob(s)));
-  },
-  encode: function(s) {
-    return window.btoa(unescape(encodeURIComponent(s)));
-  }
-}

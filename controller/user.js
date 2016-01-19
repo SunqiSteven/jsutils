@@ -5,7 +5,7 @@ window.controller.User = function(){
 		this.speed    =123;
 }
 
-// prototype 子类的prototype指向父类的一个实例实现继承
+//子类的prototype指向父类的一个实例实现继承
 
 // window.controller.user.prototype = new window.controller.common();
 // window.controller.user.prototype.constructor = window.controller.user;
