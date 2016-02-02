@@ -7,6 +7,7 @@
 javascript数组迭代器 forEach every  map filter reduce some reduceRight
 
 > js angular dependdfdfdfdfdfdfdfdf
+
 dfdfencies 
 
 
