@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8"/>
-    <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="time.js"></script>
-	<script type="text/javascript" src="datastructure.js"></script>
+  <!--   <script type="text/javascript" src="./libs/jquery-1.11.1.min.js"></script>
+	  <script type="text/javascript" src="time.js"></script>
+	  <script type="text/javascript" src="datastructure.js"></script>
     <script type="text/javascript" src="object.js"></script>
     <script type="text/javascript" src="./controller/common.js"></script>
-    <script type="text/javascript" src="./controller/user.js"></script>
+    <script type="text/javascript" src="./controller/user.js"></script> -->
 
 
 
@@ -15,19 +15,21 @@
 </head>
 <body>
       <div id="container"></div>
+      <script type="text/javascript" src="class.js"></script>
 	  <script>
-	     (function(){
-	     	   window.apisClasses.section.constants.MODE="fetch";
-               var content = window.apisClasses.section.constants.MODE;
-               var user = new window.controller.user();
-               user.getSpeed();
-               // console.log(user.constructor);
-               $("#container").text( user.version );
-               
-               
-	      })();
-          
-
+     
+	      var Person = Class.extend({
+             init:function(){
+                 console.log("Person init");
+             }
+        })
+        var Male = Person.extend({
+             init:function() {
+                 this._super();
+                 console.log("Male init");
+             }
+        })
+        console.log(new Male());
 	  </script>
 </body>
 </html>
