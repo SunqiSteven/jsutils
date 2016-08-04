@@ -10,3 +10,25 @@ window.base64 = {
     return window.btoa(unescape(encodeURIComponent(s)));
   }
 }
+
+/*popup window only including text for tip*/
+function popup(){
+  var left = ($("body").width() - 200)/2
+  var successBox = $('<div>推送成功</div>').css({
+    width:"200px",
+    paddingTop:"30px",
+    paddingBottom:"30px",
+    background:"#555",
+    position:"absolute",
+    left:left+"px",
+    top:"-500px",
+    color:"#fff",
+    fontSize:"22px",
+    textAlign:"center",
+    zIndex:9999999
+  }).animate({top:"30%"},1000)
+  $('body').append(successBox);
+  setTimeout(function(){
+    window.location.reload();
+  },2000);
+}
