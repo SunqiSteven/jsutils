@@ -16,7 +16,7 @@ window.apisClasses.section.prototype.getCurSection = function(){
 window.apisClasses.section.prototype.getRankInfo   = function(){
 	return {"data":[{}]}
 };
-
+//分页
 let totalPages = Math.ceil(total/(pageParams.pageSize))
 let pagesArr = []
 if (pageParams.current >= 5) {
@@ -42,3 +42,37 @@ const pagesArrLen = pagesArr.length
 if (pagesArr[pagesArrLen - 1] && pagesArr[pagesArrLen - 2] && pagesArr[pagesArrLen - 1] - pagesArr[pagesArrLen - 2] > 1) {
 pagesArr.splice(pagesArrLen - 1,0,'...')
 }
+//大屏整体缩放
+ <script>
+       
+      function setSize(){
+          var designWidth = 1080
+          var designHeight = 1920
+          var designRatio = designWidth / designHeight
+          var scale = 1
+          var currentScreenRatio = window.innerWidth / window.innerHeight
+        
+          var chartContainerNode = document.getElementById('root')
+          console.log(currentScreenRatio,designRatio,'999999')
+          if (currentScreenRatio > designRatio) {
+              scale = window.innerHeight / designHeight
+              chartContainerNode.style.position = 'absolute'
+              chartContainerNode.style.left = '50%'
+              chartContainerNode.style.top = '0'
+              chartContainerNode.style.transform = "scale(" + scale + ")" + " translate(-50%)"
+          } else  {
+              console.log(window.innerWidth,designWidth)
+              scale = window.innerWidth / designWidth
+              console.log(scale,'scale')
+              chartContainerNode.style.position = 'absolute'
+              chartContainerNode.style.top = '50%'
+              chartContainerNode.style.left = '0'
+              chartContainerNode.style.transform = "scale(" + scale + ")" + " translateY(-50%)"
+          }
+         
+         
+          
+      }
+      window.addEventListener('resize',setSize)
+      setSize()
+  </script>
