@@ -76,3 +76,16 @@ pagesArr.splice(pagesArrLen - 1,0,'...')
       window.addEventListener('resize',setSize)
       setSize()
   </script>
+//防抖
+function debounce(fn,delay){
+  let timer = null
+  return function(){
+    const args = arguments
+    const ctx = this
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn.apply(ctx,args)
+      timer = null
+    },delay)
+  }
+}
