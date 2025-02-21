@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin:0;
+                padding:0;
+            }
+            .screen-wrapper {
+                width:100vw;
+                height:100vh;
+                overflow: hidden;
+                position: relative;
+                /* border:1px solid red; */
+                background-color: pink;
+                
+            }
+            .screen {
+                /* display: inline-block; */
+                width:1920px;
+                height:1080px;
+
+                /* border:1px solid red; */
+                background:black;
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform-origin: 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="screen-wrapper">
+            <div class="screen" id="screen"></div>
+        </div>
+        <script>
+            function handleScreenAuto(){
+                var designWidth = 1920
+                var designHeight = 1080
+                var scale = document.documentElement.clientWidth / 
+                document.documentElement.clientHeight <
+      designWidth / designHeight
+        ? document.documentElement.clientWidth / designWidth
+        : document.documentElement.clientHeight / designHeight;
+        
+                document.querySelector('#screen').style.transform = `scale(${scale}) translate(-50%,-50%)`
+            }
+            handleScreenAuto()
+            window.onresize = handleScreenAuto
+           
+        </script>
+    </body>
+</html>
